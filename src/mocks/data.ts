@@ -271,6 +271,51 @@ const games: Games[] = [
       capsule_image: "https://cdn.akamai.steamstatic.com/steam/apps/1551360/capsule_231x87.jpg?t=1714086603",
       capsule_imagev5: "https://cdn.akamai.steamstatic.com/steam/apps/1551360/capsule_184x69.jpg?t=1714086603",
     }
+  },
+  {
+    id: "1088850",
+    data: {
+      name: "Marvel's Guardians of the Galaxy",
+      header_image: "https://cdn.akamai.steamstatic.com/steam/apps/1088850/header.jpg?t=1709581505",
+      capsule_image: "https://cdn.akamai.steamstatic.com/steam/apps/1088850/capsule_231x87.jpg?t=1709581505",
+      capsule_imagev5: "https://cdn.akamai.steamstatic.com/steam/apps/1088850/capsule_184x69.jpg?t=1709581505",
+    }
+  },
+  {
+    id: "157160",
+    data: {
+      name: "Batman arkham trilogy",
+      header_image: "batman-arkham-trilogy.jpeg",
+      capsule_image: "batman-arkham-trilogy.jpeg",
+      capsule_imagev5: "batman-arkham-trilogy.jpeg"
+    }
+  },
+  {
+    id: "795402",
+    data: {
+      name: "Escape from Tarkov",
+      header_image: "tarkov.jpg",
+      capsule_image: "tarkov.jpg",
+      capsule_imagev5: "tarkov.jpg"
+    }
+  },
+  {
+    id: "868512",
+    data: {
+      name: "Minecraft",
+      header_image: "minecraft.jpg",
+      capsule_image: "minecraft.jpg",
+      capsule_imagev5: "minecraft.jpg"
+    }
+  },
+  {
+    id: "560156",
+    data: {
+      name: "Valorant",
+      header_image: "valorant.jpg",
+      capsule_image: "valorant.jpg",
+      capsule_imagev5: "valorant.jpg"
+    }
   }
 
 ]
