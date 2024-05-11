@@ -1,0 +1,24 @@
+---
+import CheckList from "../icons/CheckList.astro";
+import Gamepad from "../icons/Gamepad.astro";
+import List from "../icons/List.astro";
+import Trophy from "../icons/Trophy.astro";
+---
+
+<a class="flex gap-2 px-5 py-4 mt-3 hover:text-slate-950" href="/">
+  <List />
+  Juegos por jugar
+</a>
+
+<a class="flex gap-2 px-5 py-4 mt-3 hover:text-slate-950" href="/jugando-actualmente">
+  <Gamepad />
+  Jugando actualmente
+</a>
+<a class="flex gap-2 px-5 py-4 mt-3 hover:text-slate-950" href="/completar">
+  <Trophy />
+  Completar al 100%
+</a>
+<a class="flex gap-2 px-5 py-4 mt-3 hover:text-slate-950" href="/jugados">
+  <CheckList />
+  Completados/jugados
+</a>
