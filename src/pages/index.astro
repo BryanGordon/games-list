@@ -1,5 +1,7 @@
 ---
+import { games } from '../mocks/data'
 import Layout from '../layouts/Layout.astro';
+import GameCard from '../components/GameCard.astro'
 ---
 
 <Layout title="My games list">
@@ -7,6 +9,8 @@ import Layout from '../layouts/Layout.astro';
 		<h1 class="font-medium lg:text-5xl">Juegos por jugar</h1>
 	</header>
 	<main class="mt-10 items-center">
-		Lista de juegos
+		{
+			games.map((game) => <GameCard games={game}/>)
+		}
 	</main>
 </Layout>
