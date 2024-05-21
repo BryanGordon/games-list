@@ -1,12 +1,11 @@
 ---
-import { games } from '../mocks/data'
 import Layout from '../layouts/Layout.astro';
 import GameCard from '../components/GameCard.astro'
 import { useFilter } from '../hooks/useFilter';
 
-const { playing, finished, toComplete, filterGames } = useFilter()
+const { toPlay, filterGames } = useFilter()
 
-const x = filterGames(playing)
+const games = filterGames(toPlay)
 ---
 
 <Layout title="My games list">
