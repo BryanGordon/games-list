@@ -16,19 +16,20 @@ export const games: GamesData[] = [
   {
     id: "1174180",
     name: "Red Dead Redemption 2",
-    status: 0,
+    status: 1,
     header_image: "https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg?t=1714055653",
   },
+  
   {
     id: "413150",
     name: "Stardew Valley",
-    status: 0,
+    status: 2,
     header_image: "https://cdn.akamai.steamstatic.com/steam/apps/413150/header.jpg?t=1711128146",
   },
   {
     id: "292030",
     name: "The Witcher® 3: Wild Hunt",
-    status: 0,
+    status: 3,
     header_image: "https://cdn.akamai.steamstatic.com/steam/apps/292030/header.jpg?t=1710411171",
   },
   {
@@ -217,4 +218,5 @@ export const games: GamesData[] = [
     status: 0,
     header_image: "valorant.jpg",
   }
+
 ]
