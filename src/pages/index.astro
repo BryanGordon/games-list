@@ -2,6 +2,11 @@
 import { games } from '../mocks/data'
 import Layout from '../layouts/Layout.astro';
 import GameCard from '../components/GameCard.astro'
+import { useFilter } from '../hooks/useFilter';
+
+const { playing, finished, toComplete, filterGames } = useFilter()
+
+const x = filterGames(playing)
 ---
 
 <Layout title="My games list">
@@ -9,8 +14,8 @@ import GameCard from '../components/GameCard.astro'
 		<h1 class="font-medium lg:text-5xl">Juegos por jugar</h1>
 	</header>
 	<main class="mt-10 items-center">
-		{
-			games.map((game) => <GameCard games={game}/>)
+		{ 
+			games.map((game) => <GameCard games={game} />)
 		}
 	</main>
 </Layout>
