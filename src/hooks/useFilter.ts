@@ -1,8 +1,9 @@
 import { games } from "../mocks/data";
 
 const playing = 1
-const finished = 2
-const toComplete = 3
+const toPlay = 2
+const finished = 3
+const toComplete = 4
 
 export const useFilter = () => {
 
@@ -14,6 +15,7 @@ export const useFilter = () => {
   return {
     filterGames,
     playing,
+    toPlay,
     finished,
     toComplete,
   }
