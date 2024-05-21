@@ -1,7 +1,15 @@
 ---
+import Layout from "../layouts/Layout.astro"
+import { useFilter } from "../hooks/useFilter"
+import GameCard from "../components/GameCard.astro"
 
+const { toComplete, filterGames } = useFilter()
+const games = filterGames(toComplete)
 ---
-
-<div>
-  
-</div>
+<Layout title="Platinar">
+  <>
+  {
+    games.map((game) => <GameCard games={game}/>)
+  }
+  </>
+</Layout>
