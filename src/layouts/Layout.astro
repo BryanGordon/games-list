@@ -26,10 +26,15 @@ const { title } = Astro.props;
 				<AsideMenu />
 			</aside>
 
-			<main>
+			<main id="home">
 				<slot />
-			</main>
 
+				<footer class="flex flex-grow place-content-center pb-6 pt-7">
+					<a class=" text-xl text-white" href="#home">
+						Volver al principio
+					</a>
+				</footer>
+			</main>
 		</div>
 	</body>
 
