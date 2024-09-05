@@ -12,9 +12,10 @@ const games = filterGames(toPlay)
 	<header class="flex place-content-center mt-10">
 		<h1 class="font-medium lg:text-5xl">Juegos por jugar</h1>
 	</header>
-	<main class="mt-10 items-center">
+	
+	<article class="grid md:grid-cols-[repeat(auto-fix), minmax(50%, 1fr))] gap-4">
 		{ 
 			games.map((game) => <GameCard games={game} />)
 		}
-	</main>
+	</article>
 </Layout>
