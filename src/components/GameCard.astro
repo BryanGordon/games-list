@@ -7,10 +7,10 @@ interface Props {
 
 const { games } = Astro.props
 ---
-<div class="mt-10 p-10 mx-72 rounded-lg bg-gray-900">
+<div class=" w-[85%] ml-12 p-5 rounded-lg bg-gray-900">
   <div class="flex flex-col items-center">
     <picture>
-      <img class="w-[650px] h-80 rounded-md" src={games.header_image} alt={games.name} />
+      <img class="w-[550px] h-52 rounded-md" src={games.header_image} alt={games.name} />
     </picture>
     <h4 class="text-slate-100 pt-10">{games.name}</h4>
   </div>
