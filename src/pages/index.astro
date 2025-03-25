@@ -13,7 +13,7 @@ const games = filterGames(toPlay)
 		<h1 class="text-zinc-800 font-medium lg:text-5xl">Juegos por jugar</h1>
 	</header>
 	
-	<article class="w-full grid md:grid-cols-2 gap-4 mt-16 sm:grid-cols-1">
+	<article class="w-[90%] grid md:grid-cols-2 gap-4 mt-16 mx-auto sm:grid-cols-1">
 		{ 
 			games.map((game) => <GameCard games={game} />)
 		}
