@@ -1,24 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import GameCard from '../components/GameCard.astro'
-import { useFilter } from '../hooks/useFilter';
 import Button from '../components/ui/Button.astro'
-
-const { toPlay, filterGames } = useFilter()
-
-const games = filterGames(toPlay)
 ---
 
 <Layout title="My games list">
-	<header class="flex place-content-center mt-10">
-		<h1 class="text-zinc-800 font-medium lg:text-5xl">Juegos por jugar</h1>
-	</header>
-
-	<Button />
-	
-	<article class="w-[90%] grid md:grid-cols-2 gap-4 mt-16 mx-auto sm:grid-cols-1">
-		{ 
-			games.map((game) => <GameCard games={game} />)
-		}
-	</article>
+	<Button buttonText='Home'/>
 </Layout>
