@@ -1,13 +1,32 @@
 ---
+import AddIcon from '../../icons/AddIcon.astro'
 
+interface Props {
+  buttonText: string
+}
+
+const props = Astro.props
 ---
-
-<button>
-  Agregar juego
-</button>
+<div>
+  <button>
+    <AddIcon />
+    {props.buttonText}
+  </button>
+</div>
 
 <style>
+  div {
+    width: 50%;
+    margin: 30px auto;
+  }
+  
   button {
-    background-color: blue;
+    display: flex;
+    justify-self: center;
+    padding: 15px 45px;
+    border-radius: 8px;
+    background-color: crimson;
+    cursor: pointer;
+    font-weight: 600;
   }
 </style>
