@@ -3,16 +3,17 @@ import AddIcon from '../../icons/AddIcon.astro'
 
 interface Props {
   buttonText: string
+  redirect: string
 }
 
 const props = Astro.props
 ---
-<div>
-  <button>
-    <AddIcon />
-    {props.buttonText}
-  </button>
-</div>
+  <div>
+    <a href={props.redirect}>
+      <slot/>
+      {props.buttonText}
+    </a>
+  </div>
 
 <style>
   div {
@@ -20,13 +21,14 @@ const props = Astro.props
     margin: 30px auto;
   }
   
-  button {
+  a {
     display: flex;
     justify-self: center;
+    justify-content: center;
     padding: 15px 45px;
     border-radius: 8px;
     background-color: crimson;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 500;
   }
 </style>
