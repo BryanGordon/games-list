@@ -1,25 +1,31 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Button from '../components/ui/Button.astro'
-import AddIcon from '../icons/AddIcon.astro'
+import Trophy from '../icons/Trophy.astro'
+import CheckList from '../icons/CheckList.astro'
+import Gamepad from '../icons/Gamepad.astro'
+import List from '../icons/List.astro'
 ---
 
 <Layout title="My games list">
 	<article>
-		<div class="bg-red-400 rounded-lg text-center p-5">
-			<Button buttonText='Ver juegos por platinar' redirect='/completados'>
-			</Button>
+		<div class="bg-red-400 flex flex-col items-center justify-center rounded-lg text-center p-5">
+			<Trophy />
+			<Button buttonText='Ver juegos por platinar' redirect='/completados' />
 		</div>
 
-		<div class="bg-red-400 rounded-lg text-center p-5">
+		<div class="bg-red-400 flex flex-col items-center justify-center rounded-lg text-center p-5">
+			<CheckList />
 			<Button buttonText='Ver juegos jugados' redirect='/jugados'/>
 		</div>
 
-		<div class="bg-red-400 rounded-lg text-center p-5">
+		<div class="bg-red-400 flex flex-col items-center justify-center rounded-lg text-center p-5">
+			<List />
 			<Button buttonText='Ver juegos por jugar' redirect='/juegos-jugar'/>
 		</div>
-
-		<div class="bg-red-400 rounded-lg text-center p-5">
+		
+		<div class="bg-red-400 flex flex-col items-center justify-center rounded-lg text-center p-5">
+			<Gamepad />
 			<Button buttonText='Ver juegos jugando actualmente' redirect='/jugando-actualmente'/>
 		</div>
 	
