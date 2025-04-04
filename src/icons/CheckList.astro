@@ -1,22 +1,23 @@
+---
+interface Props {
+  width: string
+  height: string
+  stroke: string
+  strokeWidth: string
+}
+
+const info = Astro.props
+---
+
 <svg  
-{/* 
-  width="24"  
-  height="24"  
+  width={info.width}  
+  height={info.height}  
   viewBox="0 0 24 24"  
   fill="none"  
-  stroke="#f0f0f0"  
-  stroke-width="2"  
+  stroke={info.stroke}  
+  stroke-width={info.strokeWidth} 
   stroke-linecap="round"  
   stroke-linejoin="round"
-*/}
-    width="75"  
-    height="75"  
-    viewBox="0 0 24 24"  
-    fill="none"  
-    stroke="#f0f0f0"  
-    stroke-width="1.7"  
-    stroke-linecap="round"  
-    stroke-linejoin="round"
 >
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M3.5 5.5l1.5 1.5l2.5 -2.5" />
@@ -26,19 +27,3 @@
   <path d="M11 12l9 0" />
   <path d="M11 18l9 0" />
 </svg>
-{/* double check icon 
-<svg  
-  width="24"  
-  height="24"  
-  viewBox="0 0 24 24"  
-  fill="none"  
-  stroke="#fefbfb"  
-  stroke-width="2"  
-  stroke-linecap="round"  
-  stroke-linejoin="round"  
->
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M7 12l5 5l10 -10" />
-  <path d="M2 12l5 5m5 -5l5 -5" />
-</svg>
-*/}
