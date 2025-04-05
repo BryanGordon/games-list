@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro'
 import GameCard from '../components/GameCard.astro'
 import { useFilter } from '../hooks/useFilter'
 import Button from '../components/ui/Button.astro'
+import AddIcon from '../icons/AddIcon.astro'
 
 const {toPlay, filterGames} = useFilter()
 const games = filterGames(toPlay)
@@ -13,7 +14,9 @@ const games = filterGames(toPlay)
 		<h1 class="text-zinc-800 font-medium lg:text-5xl">Juegos por jugar</h1>
 	</header>
 
-	<Button buttonText='Agregar juego' redirect='/'/>
+	<Button buttonText='Agregar juego' redirect='/'>
+		<AddIcon />
+	</Button>
 	
 	<article class="w-[90%] grid md:grid-cols-2 gap-4 mt-16 mx-auto sm:grid-cols-1">
 		{ 
