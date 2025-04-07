@@ -5,9 +5,14 @@ import Trophy from '../icons/Trophy.astro'
 import CheckList from '../icons/CheckList.astro'
 import Gamepad from '../icons/Gamepad.astro'
 import List from '../icons/List.astro'
+import AddIcon from '../icons/AddIcon.astro'
 ---
 
 <Layout title="My games list">
+	<Button buttonText='Agregar juego' redirect='/'>
+		<AddIcon />
+	</Button>
+
 	<article>
 		<div class="bg-red-400 flex flex-col items-center justify-center rounded-lg text-center p-5 grad-bg">
 			<div class="bg-stone-200/20 w-[45%] h-full content-center justify-items-center rounded-2xl">
