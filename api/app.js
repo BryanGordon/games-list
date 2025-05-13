@@ -14,9 +14,23 @@ app.get('/games', (req, res) => {
   res.json(games)
 })
 
-// Get completados
 app.get('/completados', (req, res) => {
-  const gamesList = games.filter(game => game.status === 4)
+  const gamesList = games.filter(game => game.status === 3)
+  res.json(gamesList)
+})
+
+app.get('/jugar', (req, res) => {
+  const gamesList = games.filter(game => game.status === 2)
+  res.json(gamesList)
+})
+
+app.get('/jugando', (req, res) => {
+  const gamesList = games.filter(movie => movie.status === 1)
+  res.json(gamesList)
+})
+
+app.get('/platinar', (req, res) => {
+  const gamesList = games.filter(movie => movie.status === 4)
   res.json(gamesList)
 })
 
