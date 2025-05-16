@@ -1,12 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import { useFilter } from "../hooks/useFilter"
+// import { useFilter } from "../hooks/useFilter"
+import type { GamesData } from '../mocks/data'
 import GameCard from "../components/GameCard.astro"
 import Button from '../components/ui/Button.astro'
 import AddIcon from '../icons/AddIcon.astro'
 
-const { toComplete, filterGames } = useFilter()
-const games = filterGames(toComplete)
+// const { toComplete, filterGames } = useFilter()
+// const games = filterGames(toComplete)
+
+const games:GamesData[] = await fetch('http://localhost:3000/platinar').then(res => res.json())
 ---
 <Layout title="Platinar">
   <header class="flex place-content-center mt-10">
