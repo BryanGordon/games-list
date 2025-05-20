@@ -1,12 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import { useFilter } from "../hooks/useFilter"
+// import { useFilter } from "../hooks/useFilter"
 import GameCard from "../components/GameCard.astro"
 import AddIcon from '../icons/AddIcon.astro'
 import Button from '../components/ui/Button.astro'
+import type { GamesData } from '../mocks/data'
 
-const { finished, filterGames } = useFilter()
-const games = filterGames(finished)
+// const { finished, filterGames } = useFilter()
+// const games = filterGames(finished)
+const games: GamesData[] = await fetch('http://localhost:3000/completados').then(res => res.json())
 ---
 <Layout title="Pasados">
 
