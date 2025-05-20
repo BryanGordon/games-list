@@ -1,4 +1,5 @@
 import express, { json } from 'express'
+import crypto from 'node:crypto'
 import games from './data.json' with { type: 'json' }
 
 const app = express()
@@ -32,6 +33,21 @@ app.get('/jugando', (req, res) => {
 app.get('/platinar', (req, res) => {
   const gamesList = games.filter(movie => movie.status === 4)
   res.json(gamesList)
+})
+
+
+// Delete
+app.delete('/games/:id', (req, res) => {
+  const { id } = req.params
+  const index = games.findIndex(game => game.id === id)
+
+  if (index === -1) {
+    return res.status(404).json({ message: 'Game not found' })
+  }
+
+  games.splice(index, 1)
+
+  res.json({ message: 'Game deleted' })
 })
 
 
