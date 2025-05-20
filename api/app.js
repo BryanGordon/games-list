@@ -35,6 +35,19 @@ app.get('/platinar', (req, res) => {
   res.json(gamesList)
 })
 
+// POST add a new game
+app.post('/games', (req, res) => {
+  const result = req.body
+
+  const newGame = {
+    id: crypto.randomUUID(),
+    ...result,
+  }
+
+  games.push(newGame)
+
+  res.status(201).json(newGame)
+})
 
 // Delete
 app.delete('/games/:id', (req, res) => {
