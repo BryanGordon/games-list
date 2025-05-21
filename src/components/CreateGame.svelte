@@ -10,6 +10,7 @@
       status: Number(gameStatus),
       header_image: gameImage
     }
+    
     try{
       await fetch('http://localhost:3000/games', {
         method: 'POST',
