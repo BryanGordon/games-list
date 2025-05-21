@@ -1,10 +1,12 @@
 import express, { json } from 'express'
 import crypto from 'node:crypto'
+import { corsMiddleware } from './middlewares/cors.js'
 import games from './data.json' with { type: 'json' }
 
 const app = express()
 
 app.disable('x-powered-by')
+app.use(corsMiddleware())
 app.use(json())
 
 app.get('/', (req, res) => {
