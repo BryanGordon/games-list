@@ -1,15 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import GameCard from '../components/GameCard.astro'
-// import { useFilter } from '../hooks/useFilter'
+import { useFilter } from '../hooks/useFilter'
 import Button from '../components/ui/Button.astro'
 import AddIcon from '../icons/AddIcon.astro'
 import type { GamesData } from '../mocks/data'
 
-// const {toPlay, filterGames} = useFilter()
-// const games = filterGames(toPlay)
+const {toPlay, filterGames} = useFilter()
+const games = filterGames(toPlay)
 
-const games: GamesData[] = await fetch('http://localhost:3000/jugar').then(res => res.json())
+// const games: GamesData[] = await fetch('http://localhost:3000/jugar').then(res => res.json())
 ---
 
 <Layout title='My games list'>
