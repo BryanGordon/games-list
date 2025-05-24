@@ -1,4 +1,5 @@
 ---
+import DeleteIcon from '../icons/DeleteIcon.astro'
 import Trophy from '../icons/Trophy.astro'
 import { type GamesData } from "../mocks/data"
 
@@ -12,12 +13,12 @@ const { games } = Astro.props
     <img class="h-52 rounded-md object-cover" src={games.header_image} alt={games.name} />
     <h4 class="text-slate-100 pt-8">{games.name}</h4>
     <div class="mt-4 mb-2 flex justify-around gap-5">
-      <div class="p-2">
+      <div class="p-1.5">
         <Trophy height='24' width='24' stroke='white' strokeWidth='2'/>
       </div>
       <div>
-        <button class="bg-red-500/75 p-2 rounded-lg">
-          <Trophy height='24' width='24' stroke='white' strokeWidth='2'/>
+        <button class="bg-red-500/75 p-1.5 rounded-md">
+          <DeleteIcon height='24' width='24' stroke='#13181C' strokeWidth='1.75'/>
         </button>
       </div>
     </div>
